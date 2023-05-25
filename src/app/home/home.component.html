@@ -1,0 +1,27 @@
+<app-header [title]="headerTitle" *ngIf="isHeadervisible"></app-header>
+<form *ngIf="formGroup" [formGroup]="formGroup">
+
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>name</mat-label>
+      <input matInput formControlName="name" matInput placeholder="Name">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>surname</mat-label>
+      <input matInput formControlName="surname" matInput placeholder="Surname">
+    </mat-form-field>
+  </p>
+
+  <button (click)="onFormSubmit()">Submit</button>
+
+</form>
+<mat-card>
+    <mat-card-content>Welcome</mat-card-content>
+  </mat-card>
+
+<button mat-raised button color="primary">Primary</button>
+<button mat-raised-button color="warn">Warn</button>
+
